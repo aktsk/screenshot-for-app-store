@@ -7,6 +7,10 @@ You can easily capture screenshots for App Store.
 - Click `CaptureScreenshotsForAppStore > CaptureScreenshot{number}` in Menu.
 - screenshots are automatically saved. (`{size}_{number}.png`)
 
+## DL
+
+https://github.com/aktsk/unity-CaptureScreenshotsForAppStore/releases
+
 ## License
 
 UnityExtensions.EditorCoroutine
