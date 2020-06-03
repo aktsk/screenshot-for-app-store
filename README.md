@@ -16,6 +16,7 @@ https://github.com/aktsk/unity-CaptureScreenshotsForAppStore/releases
 UnityExtensions.EditorCoroutine
 Copyright（c）2018 garettbass
 Released under the MIT license
+
 https://github.com/garettbass/UnityExtensions.EditorCoroutine
 
 ---
@@ -23,6 +24,7 @@ https://github.com/garettbass/UnityExtensions.EditorCoroutine
 GameViewSizeHelper
 Copyright (c) 2013 kyusyukeigo
 Released under the MIT license
+
 https://github.com/anchan828/unity-GameViewSizeHelper
 
 ---
