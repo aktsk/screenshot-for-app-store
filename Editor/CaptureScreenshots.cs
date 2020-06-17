@@ -30,21 +30,6 @@ namespace CaptureScreenshotsForAppStore
             new GameViewSize(2048, 2732, "12.9"),
         };
 
-        [MenuItem("CaptureScreenshotsForAppStore/CaptureScreenshot1")]
-        private static void CaptureScreenshot1() {
-            EditorCoroutine.Start(CaptureScreenshot(1));
-        }
-
-        [MenuItem("CaptureScreenshotsForAppStore/CaptureScreenshot2")]
-        private static void CaptureScreenshot2() {
-            EditorCoroutine.Start(CaptureScreenshot(2));
-        }
-
-        [MenuItem("CaptureScreenshotsForAppStore/CaptureScreenshot3")]
-        private static void CaptureScreenshot3() {
-            EditorCoroutine.Start(CaptureScreenshot(3));
-        }
-
         static IEnumerator CaptureScreenshot(int number) {
 
             string directoryName = "screenshots";
@@ -81,5 +66,18 @@ namespace CaptureScreenshotsForAppStore
             return (GameViewSizeGroupType)currentSizeGroupType.GetValue(EditorWindow.GetWindow(gameView), null);
         }
 
+        #region MenuItem methods
+        [MenuItem("CaptureScreenshotsForAppStore/CaptureScreenshot1")]
+        static void CaptureScreenshot1()
+            => EditorCoroutine.Start(CaptureScreenshot(1));
+
+        [MenuItem("CaptureScreenshotsForAppStore/CaptureScreenshot2")]
+        static void CaptureScreenshot2()
+            => EditorCoroutine.Start(CaptureScreenshot(2));
+
+        [MenuItem("CaptureScreenshotsForAppStore/CaptureScreenshot3")]
+        static void CaptureScreenshot3()
+            => EditorCoroutine.Start(CaptureScreenshot(3));
+        #endregion
     }
 }
