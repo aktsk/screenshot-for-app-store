@@ -52,7 +52,7 @@ namespace CaptureScreenshotsForAppStore
                 }
 
                 GameViewSizeHelper.ChangeGameViewSize(groupType, customSize);
-                var filename = $"{directoryName}/{customSize.baseText}_{number}.png";
+                var filename = Path.Combine(directoryName, $"{customSize.baseText}_{number}.png");
                 EditorApplication.Step();
                 EditorApplication.Step();
                 ScreenCapture.CaptureScreenshot(filename);
