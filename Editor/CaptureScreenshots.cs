@@ -30,8 +30,8 @@ namespace CaptureScreenshotsForAppStore
             new GameViewSize(2048, 2732, "12.9"),
         };
 
-        static IEnumerator CaptureScreenshot(int number) {
-
+        static IEnumerator CaptureScreenshot(int number)
+        {
             string directoryName = "screenshots";
             if (!Directory.Exists(directoryName))
                 Directory.CreateDirectory(directoryName);
