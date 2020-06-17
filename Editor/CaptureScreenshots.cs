@@ -33,8 +33,11 @@ namespace CaptureScreenshotsForAppStore
         static IEnumerator CaptureScreenshot(int number)
         {
             string directoryName = "screenshots";
+
             if (!Directory.Exists(directoryName))
+            {
                 Directory.CreateDirectory(directoryName);
+            }
 
             var assembly = typeof(EditorWindow).Assembly;
             var groupType = currentSizeGroupType(assembly);
