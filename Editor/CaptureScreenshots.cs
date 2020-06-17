@@ -11,10 +11,12 @@ namespace CaptureScreenshotsForAppStore
     /// <summary>
     /// The Unity editor extension to capture screenshots for App Store 
     /// </summary>
-    public class CaptureScreenshotsForAppStore : Editor {
-
-        class GameViewSize : GameViewSizeHelper.GameViewSize {
-            public GameViewSize(int width, int height, string baseText) {
+    public class CaptureScreenshotsForAppStore : Editor
+    {
+        class GameViewSize : GameViewSizeHelper.GameViewSize
+        {
+            internal GameViewSize(int width, int height, string baseText)
+            {
                 type = GameViewSizeHelper.GameViewSizeType.FixedResolution;
                 this.width = width;
                 this.height = height;
