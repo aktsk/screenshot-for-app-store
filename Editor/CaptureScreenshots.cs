@@ -1,13 +1,10 @@
-﻿using UnityEditor;
-using UnityEngine;
-
-using System;
-using System.Collections;
-using System.Reflection;
-
-using Kyusyukeigo.Helper;
-using UnityExtensions;
+﻿using System.Collections;
 using System.IO;
+using System.Reflection;
+using Kyusyukeigo.Helper;
+using UnityEditor;
+using UnityEngine;
+using UnityExtensions;
 
 namespace takanakahiko.Utility {
 
