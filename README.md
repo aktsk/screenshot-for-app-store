@@ -1,29 +1,40 @@
 # CaptureScreenshotsForAppStore
 
-## OverView
-
 You can easily capture screenshots for App Store.
 
-- Click `CaptureScreenshotsForAppStore > CaptureScreenshot{number}` in Menu.
+## Installation
+
+1. Download CaptureScreenshotsForAppStore.unitypackage from [Releases](https://github.com/aktsk/unity-CaptureScreenshotsForAppStore/releases)
+2. Import to your Unity project using downloaded unitypackage
+
+or
+
+1. `cd` to a directory within your Unity project's `Assets/`
+2. `git clone` or `git submodule add`
+
+## Usage
+
+- Click `CaptureScreenshotsForAppStore > CaptureScreenshot{number}` in Menu
 - screenshots are automatically saved. (`{size}_{number}.png`)
+    - ex. `5.5_1.png` `6.5_1.png` `12.9_1.png`
 
-## DL
-
-https://github.com/aktsk/unity-CaptureScreenshotsForAppStore/releases
-
-## License
+## Licenses
 
 UnityExtensions.EditorCoroutine
-Copyright（c）2018 garettbass
-Released under the MIT license
+
+Copyright (c) 2018 garettbass
+
+Released under [the MIT License (MIT)](https://mit-license.org/)
 
 https://github.com/garettbass/UnityExtensions.EditorCoroutine
 
 ---
 
 GameViewSizeHelper
+
 Copyright (c) 2013 kyusyukeigo
-Released under the MIT license
+
+Released under [the MIT License (MIT)](https://mit-license.org/)
 
 https://github.com/anchan828/unity-GameViewSizeHelper
 
@@ -31,24 +42,6 @@ https://github.com/anchan828/unity-GameViewSizeHelper
 
 CaptureScreenshotsForAppStore
 
-The MIT License (MIT)
+Copyright (c) 2020 Akatsuki Inc.
 
-Copyright (C) 2020 Akatsuki Inc.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Released under [the MIT License (MIT)](https://mit-license.org/)
