@@ -8,6 +8,9 @@ using UnityExtensions;
 
 namespace CaptureScreenshotsForAppStore
 {
+    /// <summary>
+    /// The Unity editor extension to capture screenshots for App Store 
+    /// </summary>
     public class CaptureScreenshotsForAppStore : Editor {
 
         class GameViewSize : GameViewSizeHelper.GameViewSize {
