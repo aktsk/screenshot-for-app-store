@@ -24,6 +24,12 @@ namespace CaptureScreenshotsForAppStore
             }
         }
 
+        static readonly GameViewSize[] _customSizes = {
+            new GameViewSize(1242, 2688, "6.5"),
+            new GameViewSize(1242, 2208, "5.5"),
+            new GameViewSize(2048, 2732, "12.9"),
+        };
+
         [MenuItem("CaptureScreenshotsForAppStore/CaptureScreenshot1")]
         private static void CaptureScreenshot1() {
             EditorCoroutine.Start(CaptureScreenshot(1));
@@ -50,16 +56,13 @@ namespace CaptureScreenshotsForAppStore
             var type = assembly.GetType("UnityEditor.GameView");
             var gameview = EditorWindow.GetWindow(type);
 
-            GameViewSize[] customSizes =  {
-                new GameViewSize(1242, 2688, "6.5"),
-                new GameViewSize(1242, 2208, "5.5"),
-                new GameViewSize(2048, 2732, "12.9"),
-            };
-
-            for (int i = 0; i < customSizes.Length; i++) {
-                var customSize = customSizes[i];
+            foreach (var customSize in _customSizes)
+            {
                 if (!GameViewSizeHelper.Contains(groupType, customSize))
+                {
                     GameViewSizeHelper.AddCustomSize(groupType, customSize);
+                }
+
                 GameViewSizeHelper.ChangeGameViewSize(groupType, customSize);
                 var filename = $"{directoryName}/{customSize.baseText}_{number}.png";
                 EditorApplication.Step();
