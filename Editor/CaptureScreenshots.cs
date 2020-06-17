@@ -6,8 +6,8 @@ using UnityEditor;
 using UnityEngine;
 using UnityExtensions;
 
-namespace takanakahiko.Utility {
-
+namespace CaptureScreenshotsForAppStore
+{
     public class CaptureScreenshotsForAppStore : Editor {
 
         class GameViewSize : GameViewSizeHelper.GameViewSize {
