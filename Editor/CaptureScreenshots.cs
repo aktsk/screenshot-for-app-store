@@ -54,8 +54,7 @@ namespace CaptureScreenshotsForAppStore
                 EditorApplication.Step();
                 ScreenCapture.CaptureScreenshot(filename);
                 gameview.Repaint();
-                Debug.Log(">> CaptureScreenshotsForAppStore : save to " + filename);
-                //GameViewSizeHelper.RemoveCustomSize(groupType, customSize);
+                Debug.Log($">> CaptureScreenshotsForAppStore : save to {filename}");
                 yield return null;
             }
         }
