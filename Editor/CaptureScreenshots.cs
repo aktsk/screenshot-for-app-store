@@ -39,33 +39,34 @@ namespace CaptureScreenshotsForAppStore
                 Directory.CreateDirectory(directoryName);
             }
 
-            var assembly = typeof(EditorWindow).Assembly;
-            var groupType = currentSizeGroupType(assembly);
-            var type = assembly.GetType("UnityEditor.GameView");
-            var gameview = EditorWindow.GetWindow(type);
+            var editorWindowAssembly = typeof(EditorWindow).Assembly;
+            var currentSizeGroupType = GetCurrentSizeGroupType(editorWindowAssembly);
+            var gameViewType = editorWindowAssembly.GetType("UnityEditor.GameView");
+            var gameViewWindow = EditorWindow.GetWindow(gameViewType);
 
             foreach (var customSize in _customSizes)
             {
-                if (!GameViewSizeHelper.Contains(groupType, customSize))
+                if (!GameViewSizeHelper.Contains(currentSizeGroupType, customSize))
                 {
-                    GameViewSizeHelper.AddCustomSize(groupType, customSize);
+                    GameViewSizeHelper.AddCustomSize(currentSizeGroupType, customSize);
                 }
 
-                GameViewSizeHelper.ChangeGameViewSize(groupType, customSize);
+                GameViewSizeHelper.ChangeGameViewSize(currentSizeGroupType, customSize);
                 var filename = Path.Combine(directoryName, $"{customSize.baseText}_{number}.png");
                 EditorApplication.Step();
                 EditorApplication.Step();
                 ScreenCapture.CaptureScreenshot(filename);
-                gameview.Repaint();
+                gameViewWindow.Repaint();
                 Debug.Log($">> CaptureScreenshotsForAppStore : save to {filename}");
                 yield return null;
             }
         }
 
-        static GameViewSizeGroupType currentSizeGroupType(Assembly assembly) {
-            Type gameView = assembly.GetType("UnityEditor.GameView");
-            PropertyInfo currentSizeGroupType = gameView.GetProperty("currentSizeGroupType", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Static);
-            return (GameViewSizeGroupType)currentSizeGroupType.GetValue(EditorWindow.GetWindow(gameView), null);
+        static GameViewSizeGroupType GetCurrentSizeGroupType(Assembly assembly)
+        {
+            var gameViewType = assembly.GetType("UnityEditor.GameView");
+            var currentSizeGroupType = gameViewType.GetProperty("currentSizeGroupType", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Static);
+            return (GameViewSizeGroupType)currentSizeGroupType.GetValue(EditorWindow.GetWindow(gameViewType), null);
         }
 
         #region MenuItem methods
