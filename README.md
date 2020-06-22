@@ -4,6 +4,12 @@ You can easily capture screenshots for App Store.
 
 ## Installation
 
+Add `https://github.com/aktsk/screenshot-for-app-store#release-upm.git` by Package Manager
+
+See also https://github.com/unity-packages/installation
+
+or
+
 1. Download CaptureScreenshotsForAppStore.unitypackage from [Releases](https://github.com/aktsk/unity-CaptureScreenshotsForAppStore/releases)
 2. Import to your Unity project using downloaded unitypackage
 
