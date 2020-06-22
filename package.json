@@ -1,0 +1,9 @@
+{
+    "name": "jp.aktsk.screenshot-for-app-store",
+    "displayName": "ScreenshotForAppStore",
+    "version": "0.1.1",
+    "unity": "2019.3",
+    "description": "You can easily capture screenshots for App Store.",
+    "dependencies": {
+    }
+}
