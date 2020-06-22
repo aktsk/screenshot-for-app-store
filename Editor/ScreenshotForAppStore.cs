@@ -6,12 +6,12 @@ using UnityEditor;
 using UnityEngine;
 using UnityExtensions;
 
-namespace CaptureScreenshotsForAppStore
+namespace ScreenshotForAppStore
 {
     /// <summary>
     /// The Unity editor extension to capture screenshots for App Store 
     /// </summary>
-    public class CaptureScreenshotsForAppStore : Editor
+    public class ScreenshotForAppStore : Editor
     {
         class GameViewSize : GameViewSizeHelper.GameViewSize
         {
@@ -57,7 +57,7 @@ namespace CaptureScreenshotsForAppStore
                 EditorApplication.Step();
                 ScreenCapture.CaptureScreenshot(filename);
                 gameViewWindow.Repaint();
-                Debug.Log($">> CaptureScreenshotsForAppStore : save to {filename}");
+                Debug.Log($">> ScreenshotForAppStore : save to {filename}");
                 yield return null;
             }
         }
@@ -70,15 +70,15 @@ namespace CaptureScreenshotsForAppStore
         }
 
         #region MenuItem methods
-        [MenuItem("CaptureScreenshotsForAppStore/CaptureScreenshot1")]
+        [MenuItem($"{nameof(ScreenshotForAppStore)}/CaptureScreenshot1")]
         static void CaptureScreenshot1()
             => EditorCoroutine.Start(CaptureScreenshot(1));
 
-        [MenuItem("CaptureScreenshotsForAppStore/CaptureScreenshot2")]
+        [MenuItem($"{nameof(ScreenshotForAppStore)}/CaptureScreenshot2")]
         static void CaptureScreenshot2()
             => EditorCoroutine.Start(CaptureScreenshot(2));
 
-        [MenuItem("CaptureScreenshotsForAppStore/CaptureScreenshot3")]
+        [MenuItem($"{nameof(ScreenshotForAppStore)}/CaptureScreenshot3")]
         static void CaptureScreenshot3()
             => EditorCoroutine.Start(CaptureScreenshot(3));
         #endregion
