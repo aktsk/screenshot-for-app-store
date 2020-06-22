@@ -1,16 +1,16 @@
-# CaptureScreenshotsForAppStore
+# Screenshot For App Store
 
 You can easily capture screenshots for App Store.
 
 ## Installation
 
-Add `https://github.com/aktsk/screenshot-for-app-store#release-upm.git` by Package Manager
+Add `https://github.com/aktsk/screenshot-for-app-store.git` by Package Manager
 
 See also https://github.com/unity-packages/installation
 
 or
 
-1. Download CaptureScreenshotsForAppStore.unitypackage from [Releases](https://github.com/aktsk/unity-CaptureScreenshotsForAppStore/releases)
+1. Download ScreenshotForAppStore.unitypackage from [Releases](https://github.com/aktsk/screenshot-for-app-store/releases)
 2. Import to your Unity project using downloaded unitypackage
 
 or
@@ -20,7 +20,7 @@ or
 
 ## Usage
 
-- Click `CaptureScreenshotsForAppStore > CaptureScreenshot{number}` in Menu
+- Click `ScreenshotForAppStore > CaptureScreenshot{number}` in Menu
 - screenshots are automatically saved. (`{size}_{number}.png`)
     - ex. `5.5_1.png` `6.5_1.png` `12.9_1.png`
 
@@ -46,7 +46,7 @@ https://github.com/anchan828/unity-GameViewSizeHelper
 
 ---
 
-CaptureScreenshotsForAppStore
+ScreenshotForAppStore
 
 Copyright (c) 2020 Akatsuki Inc.
 
