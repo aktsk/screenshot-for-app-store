@@ -70,15 +70,15 @@ namespace ScreenshotForAppStore
         }
 
         #region MenuItem methods
-        [MenuItem($"{nameof(ScreenshotForAppStore)}/CaptureScreenshot1")]
+        [MenuItem("ScreenshotForAppStore/CaptureScreenshot1")]
         static void CaptureScreenshot1()
             => EditorCoroutine.Start(CaptureScreenshot(1));
 
-        [MenuItem($"{nameof(ScreenshotForAppStore)}/CaptureScreenshot2")]
+        [MenuItem("ScreenshotForAppStore/CaptureScreenshot2")]
         static void CaptureScreenshot2()
             => EditorCoroutine.Start(CaptureScreenshot(2));
 
-        [MenuItem($"{nameof(ScreenshotForAppStore)}/CaptureScreenshot3")]
+        [MenuItem("ScreenshotForAppStore/CaptureScreenshot3")]
         static void CaptureScreenshot3()
             => EditorCoroutine.Start(CaptureScreenshot(3));
         #endregion
